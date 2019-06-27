@@ -34,23 +34,23 @@ Miscellaneous
 ## Deliverables
 
 1.	Web app
-a.	Project manager can create new campaigns
-b.	Project manager can create spending requests
-c.	Project manager can finalize requests
-d.	User can contribute to a campaign
-e.	User can approve spending requests
-f.	…
+* Project manager can create new campaigns
+* Project manager can create spending requests
+* Project manager can finalize requests
+* Backer can contribute to a campaign
+* Backer can approve spending requests
+*	…
 2.	Backend
-a.	Set of APIs to interact with FundMe smart contract
-•	createNewCampaign api
-•	createRequest api
-•	finalizeRequest
+*	Set of APIs to interact with FundMe smart contract
+    * createNewCampaign
+    * createRequest
+    *	finalizeRequest
 3.	FundMe smart contract
 4.	Documentations and testing
-a.	Proposal
-b.	Design
-c.	Presentation
-d.	Final report (Poster, white paper, …)
+*	Proposal
+*	Design
+*	Presentation
+*	Final report (Poster, white paper, …)
 …
 
 ## Plan
