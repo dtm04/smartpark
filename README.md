@@ -2,10 +2,12 @@
 *Don MacPhail, Sugair Ali I Alsugair*
 
 **Project Name**: SmartPark
+
 **Team Name**: Liquid
+
 **Team Members**: 
-Don -- Blockchain & Back-End Developer
-Sugair -- Blockchain & Front-End Developer
+- Don -- Blockchain & Back-End Developer
+- Sugair -- Blockchain & Front-End Developer
 
 
 ## Project Description
