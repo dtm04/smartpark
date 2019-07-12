@@ -1,70 +1,62 @@
-# FundMeOK
-An Ethereum-based crowdfunding platform
+# Decentralized Parking System
+*Don MacPhail, Sugair Ali I Alsugair*
 
-## Description
+**Project Name**: SmartPark
+**Team Name**: Liquid
+**Team Members**: 
+Don -- Blockchain & Back-End Developer
+Sugair -- Blockchain & Front-End Developer
+
+
+## Project Description
 ### What?
-
-FundMeOK is a crowdfunding platform based on blockchain technologies. It allows people to solicit funds for an idea, charity, or start-up business. It is fully decentralized, secured, and trust worthy.
+A Dapp to assist with event parking, commuter parking, paying, and reservations.  The idea is to make the process of finding a parking area much easier.  The app can help people avoid waiting in parking garages, or aimlessly looking for an available lot, and help them get to their location quicker.
 
 ### Why?
-
-There are so many crowdfunding scams on the internet nowadays. Backers have no controls on how the funds are used once they contribute to a project. We aim to solve the problems of existing crowdfunding platforms to make sure funds are used properly for project success and gain trust between manager and backers.
+Experience with working in and commuting to the city has shown how antiquated and inefficient the parking process really is.  Especially if you would like to go to a concert or other event in the city, it can be hard to find a location.  SmartPark will help users find and pay for parking well ahead of time, and if anything causes a change in plans the parking can be released for another user.
 
 ### How?
+SmartPark will be built on Ethereum network with smart contracts that can be deployed to the network. A simple web interface will be made to enable interaction between users and smart contract using various framework tools.
 
-FundMeOK is built on top of Ethereum platform. FundMe smart contract will be deployed on Ethereum nodes. A web app will be built for user to interact with the FundMe smart contract using web3.js interface in the backend. The framework and tools we expect to use are:
+### Front End
+HTML and Javascript (React)
 
-Front End
-* HTML, LESS (or SASS)/CSS
-* JavaScript, React/React Native
+### Back End
+Web3js
 
-Back end
-* NodeJS
-* Web3.js
-* IPFS
+### Tools
+- Remix
+- VS Code, Sublime, or Atom
+- Git
+- Google Drive
 
-Tools
-* Remix, Infura, Truffle
-* Visual Studio Code, Git/GitHub
-* Trello
+### Related Work
+Parkade.io a tool for users to find and rent parking spaces for companies 
 
-Miscellaneous
-* Ganache CLI, MetaMask
+ParkadeCoin use of invest in building and making parking space
 
-## Deliverables
+### Our key contributions are:
+Finding in busy places like airports, malls, universities
+Instead of spending lots of time searching for a spot the app helps you find it quickly.
+Immediate transfer of spots and renting out 
 
-1.	Web app
-* Project manager can create new campaigns
-* Project manager can create spending requests
-* Project manager can finalize requests
-* Backer can contribute to a campaign
-* Backer can approve spending requests
-*	…
-2.	Backend
-*	Set of APIs to interact with FundMe smart contract
-    * createNewCampaign
-    * createRequest
-    *	finalizeRequest
-3.	FundMe smart contract
-4.	Documentations and testing
-*	Proposal
-*	Design
-*	Presentation
-*	Final report (Poster, white paper, …)
-…
+### Deliverables
+1. Web App
+- Users will interact via a web application.
+- Reserve spots
+- Pay for spots
+- Manager approve parking requests
+- Manager approve trading spots
+- Users request a spot transition
+- Back End
+2. An API to interact with the SmartPark contract.
+- createNewSpot api
+- createPrakingRequest
+- createSpotTransfer
+- FinalizingRequests
+- Smart Contract
 
-## Plan
-
-1.	Week 1: Write proposal, setup team Github repo. Decide on set of deliverables for MVP (Minimal Viable Product)
-2.	Week 2: Produce design document: frontend, backend, smart contract, workflow
-3.	Week 3: Implement smart contract, frontend, and backend
-4.	Week 4: Implement and test the flow
-5.	Week 5: Present the work
-6.	Week 6: Wrap up and deliver the final report. Celebrate!!!
-
-
-## Team members
-
-* John Doe, Blockchain/Frontend Developer, Team Lead
-* Alex Max, Backend Developer, Tester
-
+### Plan
+Week 1: Implement smart contract
+Week 2: Implement back and front end.
+Week 3: Test and presentation, final report due.
