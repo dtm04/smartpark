@@ -59,6 +59,6 @@ Immediate transfer of spots and renting out
 - Smart Contract
 
 ### Plan
-Week 1: Implement smart contract
-Week 2: Implement back and front end.
-Week 3: Test and presentation, final report due.
+- Week 1: Implement smart contract
+- Week 2: Implement back and front end.
+- Week 3: Test and presentation, final report due.
