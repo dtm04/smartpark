@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract Campaign {
+contract ParkingLot {
     struct Request {
         string description;
         uint amount;
