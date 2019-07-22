@@ -1,67 +1,67 @@
 pragma solidity ^0.5.0;
 
 contract ParkingLot {
-    struct Request {
-        string description;
-        uint amount;
-        address payable recipient;
-        bool completed;
-        uint approvalsCount;
-        mapping(address=>bool) approvers;
-    }
-    
+    // manager of the parking lot
     address public manager;
-    uint public minContribution;
-    mapping(address=>bool) public backers;
-    Request[] public requests;
-    uint public approversCount;
+    ParkingSpot[] public allSpots;
+    uint public numSpots;
+    Location public lotLocation;
+    //mapping(ParkingSpot => bool) public available;
+    mapping(address => ParkingSpot) public owners;
+    mapping(address => Location) public addresses;
+
+    struct Location {
+        string streetAddress;
+        string city;
+        uint zip;
+        string description;
+    }
+
+    struct ParkingSpot {
+        // owner (of the parking SPOT)
+        address owner;
+        bool occupied;
+        Location loc;
+    }
     
-    constructor(uint _minContribution, address _manager) public {
-        minContribution = _minContribution;
+    constructor(address _manager, uint _numSpots) public {
         manager = _manager;
+        numSpots = _numSpots;
     }
-    
-    function contribute() public payable {
-        require(msg.value > minContribution);
-        
-        backers[msg.sender] = true;
-        approversCount++;
-    }
-    
-    function getContractBalance() public view returns(uint) {
-        return address(this).balance;
-    }
-    
-    function createRequest(string memory description, uint amount, address payable recipient) public {
-        require(msg.sender==manager,'test');
-        Request memory newRequest = Request({
-           description: description,
-           amount: amount,
-           recipient: recipient,
-           completed: false,
-           approvalsCount: 0
+
+    function setLocation(string addr, string city, uint zip, string desc) public {
+        // require msg.sender = owner.
+        Location memory loc = Location({
+            streetAddress: addr,
+            city: city,
+            zip: zip,
+            description: desc
         });
-        
-        requests.push(newRequest);
     }
     
-    function approveRequest(uint requestId) public {
-        // Must be a backer of the campaign 
-        require(backers[msg.sender]);
-        
-        // Must not vote before
-        require(!requests[requestId].approvers[msg.sender]);
-        
-        requests[requestId].approvers[msg.sender] = true;
-        requests[requestId].approvalsCount++;
+    // assign an open spot to an address
+    // payable?  not sure.
+    function reserveSpot(address owner) public payable {
+        // should probably require spot is available or throw error is occupied
+        // OR owner: msg.sender
+        ParkingSpot memory ps = ParkingSpot({
+            owner: owner,
+            occupied: true
+        });
+        allSpots.push(ps);
+        numSpots--;
     }
-    
-    function finalzeRequest(uint requestId) public {
-        require(msg.sender == manager);
-        require(requests[requestId].approvalsCount > approversCount/2);
-        require(!requests[requestId].completed);
-        
-        requests[requestId].recipient.transfer(requests[requestId].amount);
-        requests[requestId].completed = true;
-    }   
+
+    function revokeSpot(address owner) public {
+        require(msg.sender == manager, "Only manager may perform this action.");
+        // TODO: release spot & make available
+    }
+
+    // TODO: all other parking lot functions.
 }
+
+/*
+contract LotManager {
+    // MAYBE ?
+}
+*/
