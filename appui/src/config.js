@@ -1,127 +1,114 @@
-import Web3 from 'web3'
+import Web3 from "web3";
 
-const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
+const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 // Replace '' with a real account from ganache
-let account0 = ''
+let account0 = "0x9170774ff3a3443fb6123c402037c1fabe42e816";
 // Replace [] with rating ABI obtained by truffle console. Only the part between [] (inclusive)
 // TODO: update the ABI when the parking lot contract is complete!!!
 let ratingABI = [
 	{
 		constant: true,
 		inputs: [],
-		name: 'manager',
-		outputs: [{ name: '', type: 'address' }],
+		name: "availableSpots",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		constant: true,
-		inputs: [{ name: '', type: 'uint256' }],
-		name: 'requests',
-		outputs: [
-			{ name: 'description', type: 'string' },
-			{ name: 'amount', type: 'uint256' },
-			{ name: 'recipient', type: 'address' },
-			{ name: 'completed', type: 'bool' },
-			{ name: 'approvalsCount', type: 'uint256' },
-		],
-		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		stateMutability: "view",
+		type: "function"
 	},
 	{
 		constant: true,
 		inputs: [],
-		name: 'approversCount',
-		outputs: [{ name: '', type: 'uint256' }],
+		name: "manager",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		stateMutability: "view",
+		type: "function"
 	},
 	{
 		constant: true,
 		inputs: [],
-		name: 'minContribution',
-		outputs: [{ name: '', type: 'uint256' }],
+		name: "location",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		stateMutability: "view",
+		type: "function"
 	},
 	{
 		constant: true,
-		inputs: [{ name: '', type: 'address' }],
-		name: 'backers',
-		outputs: [{ name: '', type: 'bool' }],
+		inputs: [],
+		name: "numSpots",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		stateMutability: "view",
+		type: "function"
 	},
 	{
-		inputs: [
-			{ name: '_minContribution', type: 'uint256' },
-			{ name: '_manager', type: 'address' },
-		],
+		constant: true,
+		inputs: [],
+		name: "blockCosts",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'nonpayable',
-		type: 'constructor',
+		stateMutability: "view",
+		type: "function"
+	},
+	{
+		constant: true,
+		inputs: [[Object]],
+		name: "reservedSpots",
+		outputs: [[Object], [Object]],
+		payable: false,
+		stateMutability: "view",
+		type: "function"
+	},
+	{
+		inputs: [[Object], [Object]],
+		payable: false,
+		stateMutability: "nonpayable",
+		type: "constructor"
+	},
+	{
+		constant: true,
+		inputs: [],
+		name: "isAvailableSpot",
+		outputs: [[Object]],
+		payable: false,
+		stateMutability: "view",
+		type: "function"
 	},
 	{
 		constant: false,
-		inputs: [],
-		name: 'contribute',
+		inputs: [[Object], [Object]],
+		name: "addSpots",
 		outputs: [],
 		payable: true,
-		stateMutability: 'payable',
-		type: 'function',
+		stateMutability: "payable",
+		type: "function"
 	},
 	{
 		constant: true,
-		inputs: [],
-		name: 'getContractBalance',
-		outputs: [{ name: '', type: 'uint256' }],
+		inputs: [[Object]],
+		name: "calculatePrice",
+		outputs: [[Object]],
 		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		stateMutability: "view",
+		type: "function"
 	},
 	{
 		constant: false,
-		inputs: [
-			{ name: 'description', type: 'string' },
-			{ name: 'amount', type: 'uint256' },
-			{ name: 'recipient', type: 'address' },
-		],
-		name: 'createRequest',
+		inputs: [[Object], [Object]],
+		name: "reserveSlot",
 		outputs: [],
-		payable: false,
-		stateMutability: 'nonpayable',
-		type: 'function',
-	},
-	{
-		constant: false,
-		inputs: [{ name: 'requestId', type: 'uint256' }],
-		name: 'approveRequest',
-		outputs: [],
-		payable: false,
-		stateMutability: 'nonpayable',
-		type: 'function',
-	},
-	{
-		constant: false,
-		inputs: [{ name: 'requestId', type: 'uint256' }],
-		name: 'finalzeRequest',
-		outputs: [],
-		payable: false,
-		stateMutability: 'nonpayable',
-		type: 'function',
-	},
-]
+		payable: true,
+		stateMutability: "payable",
+		type: "function"
+	}
+];
 // Replace ''  with rating address obtained by truffle console
-let ratingAddress = '0x45ebb8c45F908e8B5aDf09CA2bF91a950d0A64A5'
+let ratingAddress = "0xdEbe7Dd1D97Ad5AA69348b6383F6616684A1d422";
 
 // Initialize the rating contract with web3
 // Reference: https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html
-const ratingContract = new web3.eth.Contract(ratingABI, ratingAddress)
+const ratingContract = new web3.eth.Contract(ratingABI, ratingAddress);
 
-export { ratingContract, account0 }
+export { ratingContract, account0 };

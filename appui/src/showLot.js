@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 
 handleChange=(lot)=>{
 	let _lot = lot;
-	this.props.vote(_movie)
 }
 
 render() {
 	// TODO: Implement react render() method
+	let parkingLot = this.props.lot;
 }
