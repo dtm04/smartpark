@@ -1,12 +1,11 @@
 pragma solidity ^0.5.0;
-contract ParkingPlaces { 
+contract ParkingLot { 
     
     address payable public manager;
     uint public blockCosts;
     uint public numSpots;
     uint public availableSpots;
     Spot[] public reservedSpots;
-    string public location;
     mapping (address => bool) isOccupied;
     
     struct Spot {

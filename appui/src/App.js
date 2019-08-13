@@ -3,6 +3,7 @@ import { Router, Route, Link, withRouter } from 'react-router-dom';
 import { Layout, Menu, Icon } from "antd";
 import Routes from './Routes';
 import Logo from './assets/WIT-shield.png'
+import { Contract, account0 } from "./config";
 import './App.css';
 //import { ratingContract, account0 } from "./config";
 
@@ -16,8 +17,15 @@ class App extends Component {
       parkingLots: [
         { manager: "0x43284414d6f3ba61407e3055171402b9e38992ee", numSpots: 20 }
       ],
-      showAlert: false
+      showAlert: false,
+      numSpots: 99,
     };
+  }
+
+  async componentDidMount() {
+    let spots = await Contract.methods.numSpots().call();
+    console.log(spots);
+    this.setState({ numSpots: spots });
   }
 
   render() {
@@ -36,7 +44,9 @@ class App extends Component {
           </Menu>                  
         </Header>
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
-          <Routes />
+          <div style={{padding: 24, minHeight: 280, background:'#fff'}} >
+            <Routes />
+          </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
           Donald MacPhail -- Blockchain @ WIT
