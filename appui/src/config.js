@@ -105,10 +105,10 @@ let ratingABI = [
 	}
 ];
 // Replace ''  with rating address obtained by truffle console
-let ratingAddress = "0xdEbe7Dd1D97Ad5AA69348b6383F6616684A1d422";
+let ratingAddress = "0x7C7dC38C6Ca547DD713b515B20Ac8d827959b4b8";
 
 // Initialize the rating contract with web3
 // Reference: https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html
-const ratingContract = new web3.eth.Contract(ratingABI, ratingAddress);
+const Contract = new web3.eth.Contract(ratingABI, ratingAddress);
 
-export { ratingContract, account0 };
+export { Contract, account0 };

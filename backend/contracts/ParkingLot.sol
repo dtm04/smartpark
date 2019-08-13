@@ -1,5 +1,5 @@
 pragma solidity ^0.5.0;
-contract ParkingLot { 
+contract ParkingPlaces { 
     
     address payable public manager;
     uint public blockCosts;
@@ -37,19 +37,21 @@ contract ParkingLot {
             return blockCosts * numHours;
     }
     
-    function reserveSlot(address payable parker, uint numHours) public payable {
-        require((msg.sender == parker || msg.sender == manager), "Only a verified address can complete this action.");
-        
-        payReservation(msg.sender, numHours);
+    function reserveSlot(uint numHours) public payable {
+        //payReservation(msg.sender, numHours);
         reservedSpots.push(Spot(msg.sender, numHours));
-        isOccupied[parker] = true;
+        isOccupied[msg.sender] = true;
         availableSpots--;
+        //uint price = numHours * blockCosts;
+        manager.transfer(msg.value);
     }
     
+    /*
     function payReservation(address payable parker, uint time) private {
         uint amount = time * blockCosts;
-        require(msg.value <= amount, "Message value is too low.");
+        //require(msg.value <= amount, "Message value is too low.");
         manager.transfer(amount);
         parker.transfer(msg.value - amount);
     }
+    */
 }
