@@ -59,9 +59,15 @@ Required:
 
 Now you should notice in ganache that there were some transactions and the contract will be deployed.  Next you'll need an address from Ganache to represent a user and an address from Truffle where the contract is deployed.  See the following screenshots for an idea of what to expect on Ganache.
 
+
 ![Ganache Accounts Screen](/appui/src/assets/accounts.png "Accounts")
+
+
 ![Ganache Conracts screen](/appui/src/assets/contracts.png "Contracts")
+
+
 ![Ganache Transaction Screen](/appui/src/assets/transactions.png "Transactions")
+
 
 - Save a Ganache address (usually accouts[0]) and save the address from `truffle migrate` and update config.js in /appui/
 - Navigate to the appui folder in the terminal and type `npm start` to interact with the UI.
