@@ -9,7 +9,9 @@
 - Don -- Developer
 
 
-## Project Description
+# Project Report
+
+## Introduction
 ### What?
 A Dapp to assist with event parking, commuter parking, paying, and reservations.  The idea is to make the process of finding a parking area much easier.  The app can help people avoid waiting in parking garages, or aimlessly looking for an available lot, and help them get to their location quicker.
 
@@ -31,10 +33,39 @@ Web3js
 - Git
 - Google Drive
 
+### Deliverables
+- Front End (complete)
+- Back End (partially complete)
+- Documentation (complete)
+
 ### Related Work
 Parkade.io a tool for users to find and rent parking spaces for companies 
 
 ParkadeCoin use of invest in building and making parking space
+
+##Getting Started
+### Install
+Clone the repo and run `npm instal` to get all the relevant node packages.  
+Required:
+	- ganache-cli
+	- truffle
+	- web3js
+
+### Running
+- Open a terminal and run ganache-cli, or start the ganache UI client.
+- In a separate terminal naviagate to /smartpark/backend/ and run `truffle compile` followed by `truffle migrate`
+
+Now you should notice in ganache that there were some transactions and the contract will be deployed.  Next you'll need an address from Ganache to represent a user and an address from Truffle where the contract is deployed.  See the following screenshots for an idea of what to expect on Ganache.
+
+![Ganache Accounts Screen](/appui/src/assets/accounts.png "Accounts")
+![Ganache Conracts screen](/appui/src/assets/contracts.png "Contracts")
+![Ganache Transaction Screen](/appui/src/assets/transactions.png "Transactions")
+
+- Save a Ganache address (usually accouts[0]) and save the address from `truffle migrate` and update config.js in /appui/
+- Navigate to the appui folder in the terminal and type `npm start` to interact with the UI.
+
+## Video Demo
+Currently uploaded to OneDrive.
 
 ### Our key contributions are:
 Finding in busy places like airports, malls, universities
