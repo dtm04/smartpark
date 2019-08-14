@@ -34,18 +34,20 @@ Web3js
 - Google Drive
 
 ### Deliverables
-- Front End (complete)
-- Back End (partially complete)
-- Documentation (complete)
-
-### Related Work
-Parkade.io a tool for users to find and rent parking spaces for companies 
-
-ParkadeCoin use of invest in building and making parking space
+1. Web App
+- Users will interact via a web application.
+- UI elements to view available lots and reserve a spot.
+- Option to select date/time for parking.
+2. Back-End API
+- constructor
+- isAvailable()
+- addSpots() -- manager function
+- reserveSpot() -- user function
+- calculatePrice()
 
 ##Getting Started
 ### Install
-Clone the repo and run `npm instal` to get all the relevant node packages.  
+Clone the repo and run `npm install` to get all the relevant node packages.  
 Required:
 	- ganache-cli
 	- truffle
@@ -67,28 +69,13 @@ Now you should notice in ganache that there were some transactions and the contr
 ## Video Demo
 Currently uploaded to OneDrive.
 
-### Our key contributions are:
-Finding in busy places like airports, malls, universities
-Instead of spending lots of time searching for a spot the app helps you find it quickly.
-Immediate transfer of spots and renting out 
-
-### Deliverables
-1. Web App
-- Users will interact via a web application.
-- Reserve spots
-- Pay for spots
-- Manager approve parking requests
-- Manager approve trading spots
-- Users request a spot transition
-- Back End
-2. An API to interact with the SmartPark contract.
-- createNewSpot api
-- createPrakingRequest
-- createSpotTransfer
-- FinalizingRequests
-- Smart Contract
-
 ### Plan
 - Week 1: Implement smart contract
-- Week 2: Implement back and front end.
-- Week 3: Test and presentation, final report due.
+- Week 2: ??
+- Week 3: Profit
+
+### Related Work
+Parkade.io a tool for users to find and rent parking spaces for companies 
+
+ParkadeCoin use of invest in building and making parking space
+
