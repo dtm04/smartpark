@@ -31,7 +31,9 @@ export default class Manager extends Component {
             This project aims to create a full-stack parking reservation dApp.  The back end is run on a local
             server using Ganache and Truffle to create a local blockchain.  For the front-end
             this project uses React with the help of Ant Design components.  Web3js is used
-            to interact with the ethereum smart contract.
+            to interact with the ethereum smart contract. <br /> 
+            Note: Currently the back-end is not functional, so the UI is mostly a mockup to represent
+            what could be implemented on a working smart contract.
           </Paragraph>
           <Divider />
           <Title level={2}>The Contract</Title>

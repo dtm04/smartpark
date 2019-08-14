@@ -1,15 +1,15 @@
-import React, { Component, useState } from "react";
-import { Router, Route, Link, withRouter } from 'react-router-dom';
-import { Layout, Menu, Icon } from "antd";
+import React, { Component } from "react";
+import { Link, withRouter } from 'react-router-dom';
+import { Layout, Menu } from "antd";
 import Routes from './Routes';
 import Logo from './assets/WIT-shield.png'
 import { Contract, account0 } from "./config";
 import './App.css';
 //import { ratingContract, account0 } from "./config";
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { Header, Content, Footer } = Layout;
 
+// TODO: FIX THE CONTRACT!
 class App extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +49,8 @@ class App extends Component {
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          Donald MacPhail -- Blockchain @ WIT
+          Donald MacPhail -- Blockchain @ WIT <br />
+          Contact: dmacphail1@gmail.com -- github.com/dtm04
           <img className='wit-logo' src={Logo} alt='logo'/> 
         </Footer>
       </Layout>

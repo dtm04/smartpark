@@ -6,15 +6,11 @@ import {
   TimePicker,
   Drawer,
   Table,
-  Row,
-  Col,
   Button,
-  Icon,
   InputNumber,
   message
 } from "antd";
 const { Column } = Table;
-const { RangePicker } = DatePicker;
 
 export default class User extends Component {
   constructor(props) {
@@ -88,7 +84,6 @@ export default class User extends Component {
   renderParkingSpots() {}
 
   render() {
-    const avail = this.state.numSpots;
     const dataSource = this.getAvailableSpots();
     const onReserve = () => {
       message.success('This is a success message');
