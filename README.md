@@ -45,7 +45,7 @@ Web3js
 - reserveSpot() -- user function
 - calculatePrice()
 
-##Getting Started
+## Getting Started
 ### Install
 Clone the repo and run `npm install` to get all the relevant node packages.  
 Required:
