@@ -3,11 +3,10 @@
 
 **Project Name**: SmartPark
 
-**Team Name**: Liquid
+**Team Name**: Senioritis
 
 **Team Members**: 
-- Don -- Blockchain & Back-End Developer
-- Sugair -- Blockchain & Front-End Developer
+- Don -- Developer
 
 
 ## Project Description
