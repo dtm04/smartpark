@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import { Modal, Form, Input, Button, List, Card } from 'antd';
 
+/**
+ * Manager Component
+ *  The manager is allowed to view his current parking lots and manage them.
+ *  He can create a new lot and add it to his collection.
+ *  Future Improvements:
+ *    - Editing currently available lots (prices and number of spaces)
+ *    - Add new lots to the state to be displayed on this page.
+ *    - Allow de-listing a parking lot.
+ *    - Connect the functions to a working Web3
+ */
 export default class Manager extends Component {
 	constructor(props) {
 		super(props);

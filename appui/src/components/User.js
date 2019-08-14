@@ -12,6 +12,15 @@ import {
 } from "antd";
 const { Column } = Table;
 
+
+/**
+ * User Page
+ * Allows a user to view available parking lots and select a lot to reserve a spot in.
+ * Future Improvements:
+ *   - More parking lot info, location especially
+ *   - Check for new lots and closed lots on page load.
+ *   - Return errors/events if user tries to reserve a full lot.
+ */
 export default class User extends Component {
   constructor(props) {
     super(props);

@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import { List, Typography, Icon, Divider } from 'antd';
 const { Title, Paragraph } = Typography;
 
-export default class Manager extends Component {
+/**
+ * Home Page
+ * Contains some information about the project.
+ * Future Improvements:
+ *   - Customize home page based on user
+ *   - Allow users to select a manager or parker profile and create different home page
+ *   - Display useful stats on home page, money made, locations parked at, etc.  Fun stuff.
+ *   - Donation button
+ */
+export default class Home extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -10,8 +19,8 @@ export default class Manager extends Component {
 
   render() {
     const listData = [
-      'Partner disappears from health problem.',
-      'Local Ganache version is undefined on the day I attempt to connect contract.',
+      'Partner disappears due to health problem.',
+      'Web3 keeps returning undefined values.',
       'Probably bit off more than I could chew!'
     ]
 

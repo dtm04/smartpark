@@ -9,7 +9,14 @@ import './App.css';
 
 const { Header, Content, Footer } = Layout;
 
-// TODO: FIX THE CONTRACT!
+/**
+ * Main App file
+ * Uses Routes from react-router-dom to handle page navigation.  Contains a navigation header.
+ * Future Improvements:
+ *   - User Authentication and account management
+ *   - Integrate with metamask
+ *   - Provide some user verification.
+ */
 class App extends Component {
   constructor(props) {
     super(props);
