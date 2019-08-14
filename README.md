@@ -55,7 +55,7 @@ Required:
 
 ### Running
 - Open a terminal and run ganache-cli, or start the ganache UI client.
-- In a separate terminal naviagate to /smartpark/backend/ and run `truffle compile` followed by `truffle migrate`
+- In a separate terminal navigate to /smartpark/backend/ and run `truffle compile` followed by `truffle migrate`
 
 Now you should notice in ganache that there were some transactions and the contract will be deployed.  Next you'll need an address from Ganache to represent a user and an address from Truffle where the contract is deployed.  See the following screenshots for an idea of what to expect on Ganache.
 
